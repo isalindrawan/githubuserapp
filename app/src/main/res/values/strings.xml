@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Github User</string>
+    <string name="username">@username</string>
+    <string name="name"><![CDATA[First Name & Last Name]]></string>
 </resources>

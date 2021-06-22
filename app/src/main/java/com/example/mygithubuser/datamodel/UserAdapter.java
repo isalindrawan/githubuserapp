@@ -1,6 +1,8 @@
 package com.example.mygithubuser.datamodel;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,15 +17,11 @@ import java.util.ArrayList;
 public class UserAdapter extends BaseAdapter {
 
     private final Context context;
-    private ArrayList<User> users = new ArrayList<>();
+    private ArrayList<User> users;
 
     public UserAdapter(Context context, ArrayList<User> users) {
         this.context = context;
         this.users = users;
-    }
-
-    public UserAdapter(Context context) {
-        this.context = context;
     }
 
     private class ViewHolder {
@@ -42,6 +40,8 @@ public class UserAdapter extends BaseAdapter {
 
             name.setText(user.getName());
             username.setText(user.getUsername());
+            // picture.setImageResource(user.getAvatar());
+            // Drawable res = context.getResources().getDrawable(user.getAvatar());
             picture.setImageResource(user.getAvatar());
         }
     }

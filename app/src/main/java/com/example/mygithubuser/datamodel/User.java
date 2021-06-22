@@ -8,17 +8,6 @@ public class User implements Parcelable {
     private String username, name, company, location;
     private int repository, follower, following, avatar;
 
-    public User(String username, String name, String company, String location, int repository, int follower, int following, int avatar) {
-        this.username = username;
-        this.name = name;
-        this.company = company;
-        this.location = location;
-        this.repository = repository;
-        this.follower = follower;
-        this.following = following;
-        this.avatar = avatar;
-    }
-
     protected User(Parcel in) {
         username = in.readString();
         name = in.readString();
@@ -89,5 +78,16 @@ public class User implements Parcelable {
 
     public int getAvatar() {
         return avatar;
+    }
+
+    public User(String username, String name, String company, String location, int repository, int follower, int following, int avatar) {
+        this.username = username;
+        this.name = name;
+        this.company = company;
+        this.location = location;
+        this.repository = repository;
+        this.follower = follower;
+        this.following = following;
+        this.avatar = avatar;
     }
 }
