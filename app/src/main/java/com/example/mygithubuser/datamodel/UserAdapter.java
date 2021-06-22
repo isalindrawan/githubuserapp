@@ -1,8 +1,6 @@
 package com.example.mygithubuser.datamodel;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,7 +50,7 @@ public class UserAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int position) {
+    public User getItem(int position) {
         return users.get(position);
     }
 

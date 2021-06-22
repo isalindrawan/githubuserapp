@@ -2,6 +2,7 @@ package com.example.mygithubuser;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                showDetail(users.get(position));
             }
         });
     }
@@ -106,5 +108,11 @@ public class MainActivity extends AppCompatActivity {
         int id = getResources().getIdentifier(url, null, getPackageName()); //get image  resource
         Log.d("ID", String.valueOf(id));
         return id;
+    }
+
+    private void showDetail(User user) {
+        Intent intent = new Intent(getBaseContext(), DetailActivity.class);
+        intent.putExtra("user", user);
+        startActivity(intent);
     }
 }
